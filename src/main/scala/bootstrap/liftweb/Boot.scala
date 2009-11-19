@@ -19,13 +19,15 @@ class Boot {
     LiftRules.addToPackages("com.maweis")
 
     // Build SiteMap
-    val entries = Menu(Loc("Home", List("index"), "Home")) :: Nil
+    val entries = Menu(Loc("Home", List("index"), "在线聊天")) :: 
+					Menu(Loc("Test", List("components"), "控件列表" )) :: Nil
+
+
     LiftRules.setSiteMap(SiteMap(entries:_*))
 
-    LiftRules.early.append(makeUtf8)
+// liftweb 1.0-> 1.1
+    LiftRules.early.append{ _.setCharacterEncoding("UTF-8")}
 	
   }
-	private def makeUtf8(req: HTTPRequest): Unit = {req.setCharacterEncoding("UTF-8")}
-
 }
 

@@ -16,7 +16,7 @@ import java.util.Date
  */
 
 object ChatServer extends LiftActor with ListenerManager {
-  private var chats: List[ChatLine] = List(ChatLine("System", Text("Welcome"), now))
+  private var chats: List[ChatLine] = List(ChatLine("System", Text("欢迎你，"), now))
 
   override def lowPriority = {
     case ChatServerMsg(user, msg) if msg.length > 0 =>

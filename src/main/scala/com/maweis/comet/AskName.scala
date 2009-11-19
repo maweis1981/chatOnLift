@@ -10,8 +10,8 @@ import _root_.scala.xml._
 
 class AskName extends CometActor {
   def render =
-  ajaxForm(<div>What is your username?</div> ++
+  ajaxForm(<div>请输入你想使用的昵称，仅支持英文昵称：</div> ++
            text("",name => answer(name.trim)) ++
-           <input type="submit" value="Enter"/>)
+           <input type="submit" value="确 认"/>)
 }
 

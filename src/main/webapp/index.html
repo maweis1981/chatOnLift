@@ -1,23 +1,18 @@
 <lift:surround with="default" at="content">
-		<h2>Chat On Lift</h2>
-		<p>host on maweis.com <br/>
-		code: git://github.com/maweis1981/chatOnLift.git
-			</p>
-			
+		<h2>在线聊天</h2>			
 		<p>
-			<lift:comet type="Chat" name="Other">
-			    <chat:input>
-				<chat:input/> <input type="submit" value="Post It" />
-			      </chat:input>			
+			<lift:comet type="chat" name="other">			    		
 		      <chat:body>
-			Hello <chat:name/>
+			你好： <chat:name/>
 			  <ul chat:id="na">
 			    <chat:list>
 			      <li><list:when/> <list:who/>: <i><list:msg/></i></li>
 			    </chat:list>
 			  </ul>
 		      </chat:body>
-		  
+		  		<chat:input>
+				<chat:input/> <input type="submit" value="确 认" />
+			      </chat:input>
 		    </lift:comet>
 			</p>
 </lift:surround>

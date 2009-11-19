@@ -1,6 +1,5 @@
 package	com.maweis.comet
 
-
 import _root_.net.liftweb._
 import http._
 import common._

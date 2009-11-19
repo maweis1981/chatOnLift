@@ -1,0 +1,14 @@
+<lift:surround with="default" at="content">
+<lift:HelloWorld.greeting />
+<br/>
+<lift:HelloWorld.pickSomething form="post" multipart="false">
+下拉框 :<br/> 
+<item:exchangeMethod />
+<br/> 
+单选按钮 : <br/>
+<item:pickMethod />
+<br/>
+<item:submit/>
+</lift:HelloWorld.pickSomething>
+
+</lift:surround>
